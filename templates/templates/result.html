@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitBuddy Result</title>
+</head>
+<body>
+
+<h1>Your FitBuddy Plan</h1>
+
+<h2>Workout Plan</h2>
+<pre>{{ workout_plan }}</pre>
+
+<h2>Nutrition / Recovery Tip</h2>
+<p>{{ nutrition_tip }}</p>
+
+<h2>Give Feedback</h2>
+
+<form action="/submit-feedback" method="post">
+
+    <label>User ID:</label>
+    <input type="text" name="user_id" required>
+
+    <br><br>
+
+    <label>Feedback:</label>
+    <textarea name="feedback" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Update Plan</button>
+
+</form>
+
+</body>
+</html>
