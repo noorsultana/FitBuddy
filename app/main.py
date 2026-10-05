@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+from .routes import router
 
-app = FastAPI()
+app = FastAPI(
+    title="FitBuddy",
+    description="AI Fitness Plan Generator using Gemini"
+)
 
-@app.get("/")
-def home():
-    return {"message": "Welcome to FitBuddy - AI Fitness Plan Generator"}
+app.include_router(router)
